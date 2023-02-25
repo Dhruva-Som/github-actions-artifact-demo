@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -36,3 +37,10 @@ jobs:
     steps:
       - name: Deploy
         run: echo "Deploying..."
+      - name: Download Arifact
+        uses: actions/download-articat@v3
+        with:
+          name: Build Result
+      - name: List the downloaded artifact
+        run: ls -lrt
+
