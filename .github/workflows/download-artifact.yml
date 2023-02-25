@@ -38,7 +38,7 @@ jobs:
       - name: Deploy
         run: echo "Deploying..."
       - name: Download Arifact
-        uses: actions/download-articat@v3
+        uses: actions/download-artifact@v3
         with:
           name: Build Result
       - name: List the downloaded artifact
