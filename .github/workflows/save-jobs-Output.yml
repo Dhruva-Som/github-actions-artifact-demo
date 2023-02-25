@@ -49,5 +49,5 @@ jobs:
       - name: List the downloaded artifact
         run: ls -lrt
       - name: Output file name
-        run: echo "${{needs.build.outputs.script-file}}""
+        run: echo '${{needs.build.outputs.script-file}}'
 
